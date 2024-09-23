@@ -36,7 +36,6 @@ userScore.innerHTML = score.user;
 computerScore.innerHTML = score.computer;
 
 // -------------------- RESULT ------------------------------
-
 const result = {
   WIN: "YOU WIN",
   LOST: "YOU LOST",
@@ -74,7 +73,7 @@ function playAgain() {
 }
 
 // computer Picks
-const computer = ["rock", "paper", "scissor"];
+const computer = ["rock", "paper", "scissor"]; // Changed 'scissors' to 'scissor'
 
 function computerPicked() {
   let picked = Math.floor(Math.random() * computer.length);
@@ -96,10 +95,10 @@ function setStyles() {
   for (let index = 0; index < 3; index++) {
     userResult.classList.remove("rock-div");
     userResult.classList.remove("paper-div");
-    userResult.classList.remove("scissor-div");
+    userResult.classList.remove("scissor-div"); // Changed to 'scissor-div'
     pcResult.classList.remove("rock-div");
     pcResult.classList.remove("paper-div");
-    pcResult.classList.remove("scissor-div");
+    pcResult.classList.remove("scissor-div"); // Changed to 'scissor-div'
 
     playAgainBtn.style.display = "block";
     resultText2.style.display = "block";
@@ -133,9 +132,9 @@ const startGame = (userPicked) => {
     resultBoard.style.marginTop = "6rem";
 
   } else if (
-    (userPicked === "rock" && pcPicked === "scissors") ||
+    (userPicked === "rock" && pcPicked === "scissor") || // Changed to 'scissor'
     (userPicked === "paper" && pcPicked === "rock") ||
-    (userPicked === "scissors" && pcPicked === "paper")
+    (userPicked === "scissor" && pcPicked === "paper") // Changed to 'scissor'
   ) {
     res = result.WIN;
 
